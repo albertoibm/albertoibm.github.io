@@ -48,8 +48,7 @@ function unrise(x){ x.style.top = "-10px";}
 </h3>
 
 <p>
-<form action="">
-  <label for="rs">Choose a car:</label>
+  <label for="rs">Selecciona tu edad:</label>
   <select id="edad" name="edad">
     <option value="0">0</option>
     <option value="1">1</option>
@@ -158,7 +157,7 @@ function unrise(x){ x.style.top = "-10px";}
   <label for="hombre">Hombre</label><br>
   <input type="radio" id="mujer" name="sexo" value="mujer">
   <label for="mujer">Mujer</label><br>
-
+  <p>Otras comorbilidades:</p>
   <input type="checkbox" id="diabetes" name="diabetes" value="diabetes">
   <label for="diabetes">Diabetes</label><br>
   <input type="checkbox" id="EPOC" name="EPOC" value="EPOC">
@@ -179,14 +178,13 @@ function unrise(x){ x.style.top = "-10px";}
   <label for="tabaco">Tabaquismo</label><br>
   <input type="checkbox" id="otra" name="otra" value="otra">
   <label for="otra">Otra complicaci&oacute;n</label><br>
-  <!--input type="submit"-->
+  
   <button onclick="myFunction()">Calcular</button>
 
 <p id="demo"></p>
 
 <script>
 function myFunction() {
-  var text = document.getElementById("proba");
   var edad, sexo, diab, epoc, asma, inmu, hipe, card, obes, rena, taba, otra;
   var edad = document.getElementById("edad").value;
   var hombre = document.getElementById("hombre").checked;
@@ -263,10 +261,9 @@ function myFunction() {
 -->
   var z = -2.86570234 + sexo * 0.36625118 + edad * 1.22107794 + diab * 0.23232392 + epoc * 0.0092744 + asma * -0.00894254 + inmu * 0.05327289 + hipe * 0.12370511 + otra * 0.057611 + card * -0.02289895 + obes * 0.20136768 + rena * 0.11180445 + taba * -0.01700809;
   var proba = 100 / (1 + Math.exp(-z));
-  text.innerHTML = Math.exp(1).toFixed(2) + "%";
+  document.getElementById("proba").innerHTML = Math.exp(1).toFixed(2) + "%";
 }
 </script>
-</form>
 </p>
 <p>
 My CV in <a href="cv_albertobarquin.pdf">PDF</a>.
