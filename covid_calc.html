@@ -266,7 +266,7 @@ function calcular() {
   }
   var otro = -0.59857159;
 
-  var z = -0.50311217 + sexo * 0.26635815 + edad * 1.05601253 + diab * 0.25517097 + epoc * 0.03961078 + asma * -0.01484309 + inmu * 0.05421817 + hipe * 0.09305352 + otra * 0.03972409 + card * 0.0064239 + obes * 0.17985919 + rena * 0.16341507 + taba * -0.02431126 + otro * -0.50166919;
+  var z = -0.50311217 + sexo * 0.26635815 + edad * 1.05601253 + diab * 0.25517097 + epoc * 0.03961078 + asma * -0.01484309 + inmu * 0.05421817 + hipe * 0.09305352 + otra * 0.03972409 + card * 0.0064239 + obes * 0.17985919 + rena * 0.16341507 + taba * -0.02431126 + otro * 0.50166919;
   var proba = 100 / (1 + Math.exp(-z));
   text.innerHTML = proba.toFixed(2) + "%";
 }
