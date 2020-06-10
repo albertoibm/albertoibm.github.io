@@ -258,7 +258,18 @@ function calcular() {
 //	[-2.86570234  0.36625118  1.22107794  0.23232392  0.0092744  -0.00894254
 //  0.05327289  0.12370511  0.057611   -0.02289895  0.20136768  0.11180445
 // -0.01700809 -0.68975482]
-
+  console.log("sexo = " + sexo);
+  console.log("edad = " + edad);
+  console.log("diab = " + diab);
+  console.log("epoc = " + epoc);
+  console.log("asma = " + asma);
+  console.log("inmu = " + inmu);
+  console.log("hipe = " + hipe);
+  console.log("otra = " + otra);
+  console.log("card = " + card);
+  console.log("obes = " + obes);
+  console.log("rena = " + rena);
+  console.log("taba = " + taba);
   var z = -2.86570234 + sexo * 0.36625118 + edad * 1.22107794 + diab * 0.23232392 + epoc * 0.0092744 + asma * -0.00894254 + inmu * 0.05327289 + hipe * 0.12370511 + otra * 0.057611 + card * -0.02289895 + obes * 0.20136768 + rena * 0.11180445 + taba * -0.01700809;
   var proba = 100 / (1 + Math.exp(-z));
   document.getElementById("proba").innerHTML = Math.exp(1).toFixed(2) + "%";
