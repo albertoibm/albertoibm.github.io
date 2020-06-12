@@ -200,73 +200,73 @@ function calcular() {
 	  return;
   }
   if (hombre && !mujer){
-    sexo = 0.86890889;
+    sexo = 0.88099795;
   } else{
-    sexo = -1.15086864;
+    sexo = -1.13507642;
   }
   var checkBox = document.getElementById("diabetes");
   if (checkBox.checked == true){
-     diab = 2.05591043;
+     diab = 2.15977418;
   } else {
-     diab = -0.48640251;
+     diab = -0.46301137;
   }
   var checkBox = document.getElementById("EPOC");
   if (checkBox.checked == true){
-     epoc = 6.56239934;
+     epoc = 7.02924378;
   } else {
-     epoc = -0.15238329;
+     epoc = -0.14226281;
   }
   var checkBox = document.getElementById("asma");
   if (checkBox.checked == true){
-     asma = 5.95008551;
+     asma = 5.83862144;
   } else {
-     asma = -0.16806481;
+     asma = -0.17127331;
   }
   var checkBox = document.getElementById("inmuno");
   if (checkBox.checked == true){
-     inmu = 7.77460253;
+     inmu = 8.01424364;
   } else {
-     inmu = -0.12862394;
+     inmu = -0.12477784;
   }
   var checkBox = document.getElementById("hipert");
   if (checkBox.checked == true){
-     hipe = 1.84262848;
+     hipe = 1.92779325;
   } else {
-     hipe = -0.542703;
+     hipe = -0.51872782;
   }
   var checkBox = document.getElementById("otra");
   if (checkBox.checked == true){
-     otra = 5.42924039;
+     otra = 5.50440265;
   } else {
-     otra = -0.18418783;
+     otra = -0.18167276;
   }
   var checkBox = document.getElementById("cardio");
   if (checkBox.checked == true){
-     card = 5.90297604;
+     card = 6.10298834;
   } else {
-     card = -0.16940607;
+     card = -0.16385416;
   }
   var checkBox = document.getElementById("obesidad");
   if (checkBox.checked == true){
-     obes = 1.94734551;
+     obes = 1.96766395;
   } else {
-     obes = -0.51351956;
+     obes = -0.50821686;
   }
   var checkBox = document.getElementById("renal");
   if (checkBox.checked == true){
-     rena = 6.01567938;
+     rena = 6.40652613;
   } else {
-     rena = -0.16623226;
+     rena = -0.15609083;
   }
   var checkBox = document.getElementById("tabaco");
   if (checkBox.checked == true){
-     taba = 3.35803422;
+     taba = 3.35176292;
   } else {
-     taba = -0.29779327;
+     taba = -0.29835046;
   }
-  var otro = -0.64900184;
+  var otro = -0.67274632;
 
-  var z = -1.8711481 + sexo * 0.26741982 + edad * 1.0077471 + diab * 0.20402754 + epoc * 0.0214719 + asma * -0.01338259 + inmu * 0.04826477 + hipe * 0.09081102 + otra * 0.04470234 + card * -0.00203011 + obes * 0.16983411 + rena * 0.12824314 + taba * -0.00927622 + otro * -0.5210402;
+  var z = -2.36727084 + sexo * 0.25622336 + edad * 0.9837722 + diab * 0.18759876 + epoc * 0.02327441 + asma * -0.02342623 + inmu * 0.04982622 + hipe * 0.09547078 + otra * 0.03706 + card * -0.00738306 + obes * 0.15058704 + rena * 0.11931988 + taba * -0.00435704 + otro * -0.52840053;
   var proba = 100 / (1 + Math.exp(-z));
   text.innerHTML = proba.toFixed(2) + "%";
 }
@@ -312,15 +312,26 @@ Navigation, orbital mechanics, instrumentation, control engineering, image proce
 </dl>
 <h4> Programming languages </h4>
 <p>Python, C/C++, C#, PHP, JavaScript</p>
-<h3> More about me</h3>
+-->
+<h3>Metodolog&iacute;a</h3>
 
 <p>
-Flying things have always been a fascination of mine, but my main interest is in space technology, which involves probably an unlimited pool of new skills and knowledge to be learnt. 
-Learn. Learning is probably one of my favourite activities, and I have been lucky enough to be part of an Erasmus Mundus Master Programme in Space Science and Technology, which has brought me to live in the heart of Germany in beautiful Würzburg; to the Arctic Circle in Sweden, where I got to experience the amazing spectacle that the northern lights are; and to Toulouse, the heart of the space industry in France. 
-Traveling is, I believe, one of the best ways to learn. I enjoy traveling in all the different forms it comes: riding a bike to the next town along the beach, a day off <del>getting lost</del> hiking in the mountains, a road trip to a neighbouring country, meeting new people, trying to communicate in a foreign language, or tasting new food. 
-Food. Eating is most likely my third favourite thing to do, although I'm not a great cook, I really enjoy my meals.
+Lo que pretendo con este ejercicio es generar consciencia sobre el virus CoVid19 y el riesgo real de muerte que representa para muchas personas. Hay que tomarlo en serio y evitar lo m&aacute;s posible caer en el riesgo de contagiarse y contagiar a nuestros seres queridos.<br>
+La calculadora est&aacute; basada en los <a href="https://coronavirus.gob.mx/datos/">datos oficiales</a> del coronavirus en M&eacute;xico. El algoritmo utilizado se llama regresi&oacute;n log&iacute;stica, y es un algoritmo comunmente utilizado en las ciencias m&eacute;dicas para estimar la probabilidad de que un paciente tenga cierta enfermedad, clasific&aacute;ndolo como enfermo o no enfermo. Se utiliz&oacute; un conjunto de 110953 datos, de los que el 70% (77667) fueron usados para entrenamiento, y 30% (33286) para validar que el algoritmo es capaz de generalizar. Dado que los datos tienen un resultado binario, es decir, el paciente falleci&oacute; o no falleci&oacute;, el algoritmo necesita un umbral de decisi&oacute;n para aplicar sobre la probabilidad de muerte, a partir de la cual se entiende que el paciente muri&oacute;. Debido a que la separaci&oacute;n entre los dos conjuntos no es perfecta, es decir, existen pacientes que a pesar de tener baja probabilidad de muerte, mueren, y pacientes que con una alta probabilidad de fallecer sobreviven al virus, cualquier umbral de decisi&oacute;n dar&aacute; lugar a cierto n&uacute;mero de falsos positivos y falsos negativos. Por default el algoritmo utiliza un umbral de decisi&oacute;n del 50%, sin embargo, no es necesariamente el mejor valor. A continuaci&oacute;n se explica el an&aacute;lisis ROC (Caracter&iacute;stica Operativa del Receptor, por sus siglas en ingl&eacute;s) realizado. El c&oacute;digo puede ser revisado <a href="https://github.com/albertoibm/covid_data_process">aqu&iacute;</a>.
 </p>
--->
+<p>
+La llamada curva ROC es una herramienta que nos permite medir el desempeño de un algoritmo de clasificaci&oacute;n para distintos umbrales de decisi&oacute;n. El umbral de decisi&oacute;n sirve para, a partir de una probabilidad estimada, decidir en qu&eacute; clasificaci&oacute;n se encuentra el sujeto que est&aacute; siendo evaluado. Abajo podemos ver en la primera gr&aacute;fica, donde aparecen las tasas de falsos positivos y negativos, que para minimizar ambas tasas, el umbral de decisi&oacute;n correspondiente ser&iacute;a del 15%. Esto quiere decir que si la calculadora le asigna al paciente una probabilidad estimada de muerte del 16%, el algoritmo predice que ese paciente morir&aacute; por la enfermedad. Este n&uacute;mero, dado que minimiza las tasas de falsos positivos y falsos negativos, maximiza la Sensibilidad y la Especificidad. Tener alta sensibilidad significa que es bueno clasificando a los pacientes que morir&aacute;n por la enfermedad. Tener alta especifidad significa que de los que predice que morir&aacute;n, acierta la mayor parte del tiempo, y entre mayor es el umbral de decisi&oacute;n, la especificidad tambi&eacute;n aumenta. El valor de 15% nos da un valor m&aacute;ximo para las dos, con 75% cada una, sin embargo, dado que los datos tienen una mortalidad del 15%, la gran mayor&iacute;a de pacientes se recupera, por lo que el n&uacute;mero de pacientes con predicci&oacute;n de muerte es significativamente m&aacute;s alto del valor real.<br>
+<img src="images/fpr_fnr.png"><br>
+</p>
+<p>
+Para minimizar los n&uacute;meros absolutos de falsos positivos y falsos negativos tenemos que observar la siguiente gr&aacute;fica. Para ello se elige como umbral de decisi&oacute;n el punto donde se cruzan las curvas verde y roja, que corresponde al 30%. Este valor nos da una especificidad del 90%, lo que significa que los pacientes con predicci&oacute;n de muerte tienen una predicci&oacute;n significativamente m&aacute;s certera, sin embargo, la sensibilidad baja a un 43%, es decir, que un n&uacute;mero significativo de los pacientes que el algoritmo predice que sobrevivir&aacute;n, no lo logran en realidad. Volviendo a la primera gr&aacute;fica, es importante notar que cuando la probabilidad estimada de muerte es del 40%, la especificidad llega al 95%, y para una probabilidad estimada del 60%, la especificidad alcanza el 99%, lo que significa que un paciente con predicci&oacute;n de muerte tiene muy pocas probabilidades de recuperarse.<br>
+<img src="images/all.png"><br>
+</p>
+<p>
+Y bueno, ¿pero el modelo clasifica correctamente? Para saber qu&eacute; tan bueno es un algoritmo separando pacientes entre estas 2 clases, se mide el &aacute;rea bajo la curva ROC. Una curva con un &aacute;rea de 1 significa que el algoritmo logra una separaci&oacute;n perfecta, sin embargo en muy pocos casos es posible esto. Al otro extremo, un algoritmo que no logra separar en absoluto a los sujetos en 2 clasificaciones tiene un area de 0.5, es decir, que la curva es una l&iacute;nea inclinada a 45 grados. Como puede observarse en la gr&aacute;fica de abajo, la curva se encuentra bastante por encima de la l&iacute;nea inclinada, marcada con una l&iacute;nea punteada, y tiene un &aacute;rea bajo la curva de 0.82. De acuerdo con Hosmer y Lemeshow (Applied Logistic Regression, p. 162), un valor entre 0.8 y 0.9 sugiere una capacidad "excelente" de discriminaci&oacute;n, por lo que podemos considerar las predicciones de nuestro modelo como buenas.<br>
+<img src="images/roc.png"><br>
+
+</p>
       </section>
     </div>
 
