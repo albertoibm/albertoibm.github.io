@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Albertoibm.GitHub.io : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Predicci&oacute;n de infecciones y muertes por CoVid19</title>
+    <script>
+function rise(x){ x.style.top = "0px";}
+function unrise(x){ x.style.top = "-10px";}
+    </script>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/albertoibm" onmouseover="rise(this)" onmouseout="unrise(this)">View on GitHub</a>
+
+          <h1 id="project_title">CoVid19</h1>
+          <h2 id="project_tagline">Modelado matem&aacute;tico de la epidemia CoVid19 en M&eacute;xico</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+<div style="float:right;width:30%">
+	<p>
+	</p>
+	<!--h3>
+		<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Probabilidad
+	</h3>
+	<p>
+	<ul>
+	  <li><p id="proba">0%</p></li>
+	</ul>
+	</p-->
+</div>
+<h3>
+	<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Predicci&oacute;n de infecciones y muertes
+</h3>
+
+
+<p>
+Lo que pretendo con este ejercicio es generar consciencia sobre el virus CoVid19 y el riesgo real de muerte que representa para muchas personas. Hay que tomarlo en serio y evitar lo m&aacute;s posible caer en el riesgo de contagiarse y contagiar a nuestros seres queridos.<br>
+El modelo utiliza los <a href="https://coronavirus.gob.mx/datos/">datos oficiales</a> del coronavirus en M&eacute;xico actualizados hasta el 20 de Junio.
+El c&oacute;digo puede ser revisado <a href="https://github.com/albertoibm/covid_data_process">aqu&iacute;</a>.
+</p>
+<p>
+<img src="images/prediction.png"><br>
+
+Es extra&ntilde;o hablar de volver a la nueva normalidad y terminar la jornada de sana distancia cuando nos encontramos en el pico de una epidemia como la que se est&aacute; viviendo en el mundo. Pareciera el peor momento para relajar las recomendaciones en cuanto a protecci&oacute;n contra el masivo contagio de ese enemigo invisible. Y es verdad, al ser una amenaza invisible cuesta trabajo mantener la disciplina y decidir no jugarse el destino y exponerse a ser contagiado  o inadvertidamente contagiar a otras personas, y dado que este es un virus bastante contagioso, al llegar a la enorme cantidad de gente a la que puede llegar, se traducir&iacute;a en una terrible cantidad de decesos.
+Las epidemias son fen&oacute;menos que tienen comportamientos m&aacute;s o menos predecibles que se pueden modelar con ecuaciones matem&aacute;ticas que nos dan un cierto nivel de confianza sobre lo que va a suceder. Claro, estos modelos est&aacute;n influenciados en gran manera por el comportamiento de la gente y las medidas tomadas por el gobierno para lograr limitar el n&uacute;mero de contagios y as&iacute; evitar saturar los sistemas de salud, puesto que, entre otras cosas, la <a href="covid_calc.html">probabilidad de muerte</a> depende directamente de tener sistemas de salud capaces de responder y atender a los enfermos m&aacute;s graves.
+<br>
+El modelo aqu&iacute; utilizado est&aacute; basado en <a href="https://www.medrxiv.org/content/10.1101/2020.04.29.20084285v1">la publicaci&oacute;n</a> de los cient&iacute;ficos italianos Aldo Ianni y Nicola Rossi, pertenecientes al Instituto Nacional de F&iacute;sica Nuclear, en la que toman los datos de contagios de coronavirus n Italia y Espa&ntilde;a y encuentran que este modelo es el mejor candidato para describir el comportamiento de la epidemia. En nuestra gr&aacute;fica, hemos adaptado el modelo a los datos reales de M&eacute;xico, y podemos ver en color rojo &eacute;stos datos reales de casos de coronavirus en nuestro pa&iacute;s, tomados directamente de la p&aacute;gina dedicada por el gobierno de M&eacute;xico para informar sobre la situaci&oacute;n local de la epidemia. La curva roja muestra el n&uacute;mero de casos totales confirmados; la curva azul muestra, de los casos confirmados, cu&aacute;ntos siguen siendo activos; y la curva verde muestra el n&uacute;mero de muertos. Cada una de estas tres curvas tiene sobrepuesta la curva de datos reales, con lo que se puede apreciar c&oacute;mo el modelo se ajusta a los datos notablemente. La barra vertical nos muestra d&oacute;nde nos encontramos el d&iacute;a de hoy.
+</p>
+<p>
+Éstos modelos normalmente se presentan con un &uacute;nico escenario posible, y ese es el ajuste al modelo que presenta el error m&aacute;s bajo con respecto a los datos actuales, sin embargo, hay una cantidad considerable de posibles futuros que tambi&eacute;n se ajustan a los datos actuales y eso podemos verlo en la gr&aacute;fica de abajo.  Las curvas azules nos muestran el mismo modelo expresado en distintos par&aacute;metros, donde se puede ver que a partir de la situaci&oacute;n actual, se puede llegar a un n&uacute;mero de escenarios distintos en cuanto a la cantidad de casos confirmados. Las l&iacute;neas negras describen el n&uacute;mero de personas fallecidas acumuladas, que nos muestra tambi&eacute;n un n&uacute;mero considerable de posibles futuros, entre los que las vidas de posiblemente 60 mil personas est&aacute;n en juego.
+<img src="images/ghost.png"><br>
+</p>
+<p>
+En la siguiente gr&aacute;fica podemos ver c&oacute;mo el modelo describe el n&uacute;mero de casos nuevos diarios y muertos nuevos, de la que en caso de seguir con las medidads de distanciamiento social, estar&iacute;amos pasando ahora por el m&aacute;ximo, poco menos de 600 muertos en un d&iacute;a, y de nosotros depende que ese n&uacute;mero no aumente.<br>
+<img src="images/daily.png"><br>
+Los puntos son los datos reales y las curvas son lo que el modelo nos dice de c&oacute;mo se comportar&aacute; la epidemia. El eje horizontal nos dice cu&aacute;ntos d&iacute;as han pasado desde el comienzo de la epidemia el 22 de Febrero. As&iacute;, podemos ver que el d&iacute;a de m&aacute;ximo n&uacute;mero de contagios se dio a los 100 d&iacute;as del comienzo de la epidemia, es decir el 3 de Junio, sin embargo, esto no significa que el riesgo hoy es menor. <br>
+Hay que entender que en realidad el riesgo m&aacute;ximo de contagio se da estos d&iacute;as, cuando el n&uacute;mero de personas infectadas est&aacute; en su punto m&aacute;ximo, y esto se entiende f&aacute;cilmente dado que entre m&aacute;s enfermos hay, m&aacute;s probable es encontrarse con uno en la calle y terminar uno contagiado. ¿Entonces por qu&eacute; el n&uacute;mero m&aacute;ximo de contagios sucedi&oacute; hace dos semanas? La raz&oacute;n es que el n&uacute;mero de contagios nuevos depende tanto del n&uacute;mero de personas infectadas actualmente, como del n&uacute;mero de personas susceptibles, y si este &uacute;ltimo es bajo dado que el resto ya se infect&oacute;, los contagios nuevos comienzan a reducirse. Ahora, ¿qu&eacute; pasa si nos confiamos y comenzamos a salir a la calle pensando que el riesgo ya pas&oacute;? Pues aumenta nuevamente la cantidad de personas susceptibles y por lo tanto el n&uacute;mero de nuevos contagios.
+</p>
+
+<p>
+Los cient&iacute;ficos italianos concluyen su art&iacute;culo diciendo que la inatenci&oacute;n y el poco cuidado de las comunidades y gobiernos incremetar&aacute; invariablemente el n&uacute;mero de personas susceptibles, exponiendo a m&aacute;s gente a la infecci&oacute;n, lo que traer&aacute; como consecuencia un esparcimiento descontrolado de la epidemia, llegando a una gran parte de la poblaci&oacute;n del pa&iacute;s, contando decenas de millones de casos, por lo que es extremadamente importante mantener las medidas de seguridad y distancia.
+</p>
+<p>
+El modelo toma en cuenta cuatro variables y la primera de ellas es el n&uacute;mero de personas susceptibles a enfermarse. Es importante entender que este n&uacute;mero, aunque podr&iacute;a pensarse que es igual a la poblaci&oacute;n total del pa&iacute;s, el valor real es mucho m&aacute;s bajo puesto que se han tomado medidas para reducirlo, entre ellas, quedarse en casa. Quedarse en casa es la mejor manera de no ser parte del grupo de susceptibles y por tanto, la mejor manera de mantener el n&uacute;mero de infectados bajo. La segunda variable es esa, el n&uacute;mero de infectados activos, y se calcula a partir del n&uacute;mero de infectados diarios. La segunda y tercera variables son el n&uacute;mero de muertes y el de recuperados y tambi&eacute;n se calculan a partir de cu&aacute;ntos hay cada d&iacute;a.
+</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-70923538-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    
+
+  </body>
+</html>
