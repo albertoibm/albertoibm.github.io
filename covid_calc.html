@@ -187,7 +187,7 @@ function unrise(x){ x.style.top = "-10px";}
 function calcular() {
   var text = document.getElementById("proba");
   var edad, sexo, diab, epoc, asma, inmu, hipe, card, obes, rena, taba, otra;
-  var edad = (document.getElementById("edad").value - 46.60585729499) / 16.07280097938;
+  var edad = (document.getElementById("edad").value - 45.0290376) / 16.58259863;
   var hombre = document.getElementById("hombre").checked;
   var mujer = document.getElementById("mujer").checked;
 
@@ -200,73 +200,73 @@ function calcular() {
 	  return;
   }
   if (hombre && !mujer){
-    sexo = 0.88099795;
+    sexo = 0.94917255;
   } else{
-    sexo = -1.13507642;
+    sexo = -1.05354921;
   }
   var checkBox = document.getElementById("diabetes");
   if (checkBox.checked == true){
-     diab = 2.15977418;
+     diab = 2.30430755;
   } else {
-     diab = -0.46301137;
+     diab = -0.43396985;
   }
   var checkBox = document.getElementById("EPOC");
   if (checkBox.checked == true){
-     epoc = 7.02924378;
+     epoc = 8.03257671;
   } else {
-     epoc = -0.14226281;
+     epoc = -0.12449305;
   }
   var checkBox = document.getElementById("asma");
   if (checkBox.checked == true){
-     asma = 5.83862144;
+     asma = 6.07495992;
   } else {
-     asma = -0.17127331;
+     asma = -0.16461014;
   }
   var checkBox = document.getElementById("inmuno");
   if (checkBox.checked == true){
-     inmu = 8.01424364;
+     inmu = 9.34577052;
   } else {
-     inmu = -0.12477784;
+     inmu = -0.10700027;
   }
   var checkBox = document.getElementById("hipert");
   if (checkBox.checked == true){
-     hipe = 1.92779325;
+     hipe = 2.0156196;
   } else {
-     hipe = -0.51872782;
+     hipe = -0.49612536;
   }
   var checkBox = document.getElementById("otra");
   if (checkBox.checked == true){
-     otra = 5.50440265;
+     otra = 6.28279753;
   } else {
-     otra = -0.18167276;
+     otra = -0.15916477;
   }
   var checkBox = document.getElementById("cardio");
   if (checkBox.checked == true){
-     card = 6.10298834;
+     card = 6.90321691;
   } else {
-     card = -0.16385416;
+     card = -0.14486;
   }
   var checkBox = document.getElementById("obesidad");
   if (checkBox.checked == true){
-     obes = 1.96766395;
+     obes = 2.09730914;
   } else {
-     obes = -0.50821686;
+     obes = -0.47680143;
   }
   var checkBox = document.getElementById("renal");
   if (checkBox.checked == true){
-     rena = 6.40652613;
+     rena = 7.09244178;
   } else {
-     rena = -0.15609083;
+     rena = -0.14099517;
   }
   var checkBox = document.getElementById("tabaco");
   if (checkBox.checked == true){
-     taba = 3.35176292;
+     taba = 3.59102157;
   } else {
-     taba = -0.29835046;
+     taba = -0.27847229;
   }
-  var otro = -0.67274632;
+  var otro = -0.87214516;
 
-  var z = -2.36727084 + sexo * 0.25622336 + edad * 0.9837722 + diab * 0.18759876 + epoc * 0.02327441 + asma * -0.02342623 + inmu * 0.04982622 + hipe * 0.09547078 + otra * 0.03706 + card * -0.00738306 + obes * 0.15058704 + rena * 0.11931988 + taba * -0.00435704 + otro * -0.52840053;
+  var z = -2.8189819 + sexo * 0.27474152 + edad * 1.09075551 + diab * 0.18222986 + epoc * 0.01671705 + asma * -0.01691838 + inmu * 0.04920536 + hipe * 0.08942371 + otra * 0.07775827 + card * -0.00462491 + obes * 0.15581292 + rena * 0.11400991 + taba * -0.0091178 + otro * -0.72069926;
   var proba = 100 / (1 + Math.exp(-z));
   text.innerHTML = proba.toFixed(2) + "%";
 }
